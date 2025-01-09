@@ -10,7 +10,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Main {
-
 	public static void getText() throws IOException {
 		FileReader fr = null;
 		try {
@@ -40,10 +39,7 @@ public class Main {
 	public static void netConnect() {
 		try {
 			URL url = new URL("http://www.impressjapan.jp/");
-
-			// HTMLを1行ずつ取得
 			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-
 			String line;
 			while ((line = reader.readLine()) != null) {
 				System.out.println(line);
@@ -53,7 +49,6 @@ public class Main {
 			System.err.println("Invalid URL format: " + e.getMessage());
 		} catch (IOException e) {
 			System.err.println("Error: " + e.getMessage());
-
 		}
 	}
 
@@ -61,5 +56,4 @@ public class Main {
 		getText();
 		netConnect();
 	}
-
 }
