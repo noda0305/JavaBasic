@@ -1,5 +1,6 @@
 package com.main;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,9 +8,10 @@ import java.io.IOException;
 public class Main {
 	public static void main(String[] args) throws Exception {
 		FileReader fr = null;
-		String filename = "C:\\Users\\noda\\OneDrive\\ドキュメント\\workspace\\sample_project\\src\\resource\\test.txt";
 		try {
-			fr = new FileReader(filename);
+			File test = new File("test.txt");
+			String testTextAbsolutePpath = test.getAbsolutePath();
+			fr = new FileReader(testTextAbsolutePpath);
 			char c1 = (char) fr.read();
 			char c2 = (char) fr.read();
 			System.out.println(c1);
