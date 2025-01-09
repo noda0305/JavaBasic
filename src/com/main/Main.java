@@ -1,9 +1,6 @@
 package com.main;
 
-<<<<<<< HEAD
 import java.io.BufferedReader;
-=======
->>>>>>> b3db4ae4c89e805ddce77ab9b78b87c903471d63
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -16,11 +13,7 @@ public class Main {
 	public static void getText() throws IOException {
 		FileReader fr = null;
 		try {
-<<<<<<< HEAD
 			File test = new File("src/resource/test.txt");
-=======
-			File test = new File("test.txt");
->>>>>>> b3db4ae4c89e805ddce77ab9b78b87c903471d63
 			String testTextAbsolutePpath = test.getAbsolutePath();
 			fr = new FileReader(testTextAbsolutePpath);
 			char c1 = (char) fr.read();
