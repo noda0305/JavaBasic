@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 
 public class Main {
@@ -38,7 +39,7 @@ public class Main {
 
 	public static void netConnect() {
 		try {
-			URL url = new URL("http://www.impressjapan.jp/");
+			URL url = URI.create("http://www.impressjapan.jp/").toURL();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
 			String line;
 			while ((line = reader.readLine()) != null) {
